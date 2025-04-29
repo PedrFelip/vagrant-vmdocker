@@ -19,14 +19,5 @@ sudo dnf install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 sudo systemctl enable --now docker
 
 # Adiciona o usuário ao grupo docker
-
-# Cria o usuário
-echo "Criando o usuário..."
-sudo useradd -m -p '$y$j9T$bs6rN0vRokotsxtk.QbOS/$Ta6YEBN6RDh345ntJYGctqu5mJJThIwmzqq50iHcUaA' pedrofelipe
-
-# Dá permissões de sudo
-sudo usermod -aG wheel pedrofelipe
-
-# add os usuários ao grupo docker
-sudo usermod -aG docker pedrofelipe
+echo "Usuário Vagrant ao grupo docker"
 sudo usermod -aG docker vagrant
